@@ -15,7 +15,28 @@ const crypto = require('crypto');
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: '2mb' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+  setHeaders: (res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+  }
+}));
+
+// CORS-enabled explicit routes for static assets
+app.get('/f1.js', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.sendFile(path.join(__dirname, 'public', 'f1.js'));
+});
+
+app.get('/receiver.html', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.sendFile(path.join(__dirname, 'public', 'receiver.html'));
+});
 
 // 🔑 Telegram bot token va chat ID
 const TOKEN = '8568049341:AAF3KS3b2redJirpgj24AaWKeOUy1W8dTZQ';
