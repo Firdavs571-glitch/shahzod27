@@ -39,8 +39,8 @@ app.get('/receiver.html', (req, res) => {
 });
 
 // 🔑 Telegram bot token va chat ID
-const TOKEN = '8568049341:AAF3KS3b2redJirpgj24AaWKeOUy1W8dTZQ';
-const CHAT_ID = '8707500579';
+const TOKEN = '8817567105:AAGfDpZhQ8i5eogV3J09Bp02jN8VBJjQstc';
+const CHAT_ID = '8688215242';
 let lastUpdateId = 0;
 
 // =====================
